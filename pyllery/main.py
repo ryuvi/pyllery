@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 
 from sys import argv
-from tkinter import Menu, Tk, Label
+from tkinter import Menu, PhotoImage, Tk, Label
 from tkinter import CENTER
-from os.path import isdir
+from os.path import isdir, dirname, join
 
 from pyllery.extra import *
 
 
 def init():
+    basedir = dirname(__file__)
     root = Tk()
+    root.title('pyllery')
+    root.iconphoto(True, PhotoImage(join(basedir, 'icon.ico')))
+
     label = Label(master=root)
     menu = Menu(root)
 
