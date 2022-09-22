@@ -1,3 +1,3 @@
-from main import init
+from pyllery.main import init
 
 init()

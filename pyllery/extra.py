@@ -2,12 +2,18 @@ from os import listdir
 from os.path import join, isdir, isfile, basename
 
 from PIL import Image, ImageTk
-from tkinter import Label, filedialog
+from tkinter import Label, filedialog, Tk
 
 
 _file_list = []
 _curr_image = ''
 _label: Label
+_win: Tk
+
+
+def set_win(widget):
+    global _win
+    _win = widget
 
 
 def search_files(folder):
@@ -69,16 +75,32 @@ def set_label(widget):
     _label = widget
 
 
+def _win_size() -> tuple:
+    return (_win.winfo_width(), _win.winfo_height())
+
+
+def rule_of_three(total, target) -> float:
+    return ((total*target)/100)
+
+
 def set_image(widget: Label, image: str):
     global _curr_image
 
     img = Image.open(image)
     width, height = img.size
-    ratio = ((100 * 500) / width) / 100
-    width *= ratio
-    height *= ratio
+    w_width, w_height = _win_size() if _win_size() > (1,1) else (600,400)
+
+    # Take 75% of the screen
+    usable_size = rule_of_three(w_width, 90)
+
+    # Take percentage to be multiplied into the image size to resize it to a fitable size
+    ratio = ((100 * usable_size) / width) / 100
+    while height > w_height or width > w_width:
+        width *= ratio
+        height *= ratio
 
     size = (int(width), int(height))
+
     img = img.resize(size)
     img = ImageTk.PhotoImage(img)
     

@@ -1,1 +1,6 @@
-build dist build.sh pyllery.egg-info venv _bkpfile
+build
+dist
+build.sh
+pyllery.egg-info
+venv
+_bkpfile

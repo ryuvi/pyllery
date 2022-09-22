@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 from sys import argv
-from tkinter import W, Menu, Tk, Label
-from os import listdir
-from os.path import join, isdir, isfile
+from tkinter import Menu, Tk, Label
+from tkinter import CENTER
+from os.path import isdir
 
-from extra import *
-from PIL import Image, ImageTk
-from tkinter import Label
+from pyllery.extra import *
 
 
 def init():
@@ -17,14 +15,18 @@ def init():
 
     files = []
 
-    label.grid(row=1, column=0)
+    label.place(anchor=CENTER, rely=0.5, relx=0.5)
     root.config(menu=menu)
+    root.geometry('800x600')
+    menu.add_command(label='<', command=lambda: left_key('a'))
+    menu.add_command(label='>', command=lambda: right_key('a'))
     menu.add_command(label='Open File', command=open_file)
     menu.add_command(label='Open Folder', command=open_folder)
 
     root.bind('<Left>', left_key)
     root.bind('<Right>', right_key)
     set_label(label)
+    set_win(root)
 
     if len(argv) > 1:
         dir = argv[1]
