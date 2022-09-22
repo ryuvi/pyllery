@@ -11,7 +11,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/ryuvi/pyllery?style=for-the-badge)
 ![GitHub open issues](https://img.shields.io/github/issues/ryuvi/pyllery?style=for-the-badge)
 ![GitHub open pull requests](https://img.shields.io/github/issues-pr/ryuvi/pyllery?style=for-the-badge)
-<img title="" src="screenshot.png" alt="exemplo imagem">
+![Pyllery](./screenshot.png)
 
 </center>
 
