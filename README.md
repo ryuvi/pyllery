@@ -4,8 +4,6 @@
 
 </center>
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 <center>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/ryuvi/pyllery?style=for-the-badge)
@@ -26,8 +24,6 @@ The Project still under development and the every improvement or adjustment you 
 ## 💻 Requirements
 
 Before start using the software see if:
-
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 
 - You have a Windows, Linux or Mac machine.
 
@@ -66,7 +62,7 @@ Obs: For now this software does not have any option to put in the cli.
 
 ## 📫 Contributing to pyllery
 
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 To contribute to pyllery, follow the instructions:
 
