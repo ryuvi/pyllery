@@ -3,16 +3,18 @@
 from sys import argv
 from tkinter import Menu, PhotoImage, Tk, Label
 from tkinter import CENTER
-from os.path import isdir, dirname, join
+from os.path import isdir, join, dirname
 
 from pyllery.extra import *
 
 
 def init():
-    basedir = dirname(__file__)
     root = Tk()
     root.title('pyllery')
-    root.iconphoto(True, PhotoImage(join(basedir, 'icon.ico')))
+    
+    # TODO: Later add the icon (This shit does not work yet)
+    # basedir = dirname(__file__)
+    # root.iconphoto(True, PhotoImage(file=join(basedir, '..', 'icon.png')))
 
     label = Label(master=root)
     menu = Menu(root)
@@ -47,3 +49,6 @@ def init():
 
 
     root.mainloop()
+
+if __name__ == '__main__':
+    init()
